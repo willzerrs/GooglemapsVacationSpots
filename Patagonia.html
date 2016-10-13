@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" 
+      type="image/jpg" 
+      href="globe.jpg" />
+      <title>Patagonia</title>
+	<link rel="stylesheet" type="text/css"
+			  href="map.css">
+			  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiCRtuwn80_6Ztef5BsgbSCdQ3jExgDr0&callback=myMap"
+    async defer></script>	
+	<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng({position:patagonia});
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+     center: new google.maps.LatLng(-41.5062488,-68.7099954),  
+     zoom: 7
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+  var patagonia = new google.maps.LatLng(-41.5062488,-68.7099954);
+  var marker= new google.maps.Marker({position:patagonia});
+  marker.setMap(map);
+}
+
+ google.maps.event.addDomListener(window, 'load', myMap);
+</script>
+</head>
+<body>
+	<!-- BEGIN NAVIGATION BAR-->
+		<ul id="navbar">
+			<li class="navlist-item"><a href="Home Map.html"><font style="Abril Fatface">Home Map</a></li>
+			<li class="dropdown navlist-item "><a class="dropbtn">Beaches </a>
+			 <div class="dropdown-content">	
+			 	<a href="Barrier Reaf.html">Great Barrier Reef </a>
+			 	<a href="Bermuda.html">Bermuda </a>
+			 	<a href="Kauapea.html">Kauapea Beach </a>
+			 	<a href="Bahamas.html">Bahamas </a>
+			 </div></li>
+			<li class="dropdown navlist-item "><a class="dropbtn">Hiking </a>
+			 <div class="dropdown-content">	
+			 	<a href="Patagonia.html">Patagonia</a>
+			 	<a href="Bali.html">Bali </a>
+			 	<a href="Yellowstone.html">Yellowstone </a>
+			 </div></li>
+			<li class="dropdown navlist-item "><a class="dropbtn">Theme Parks </a>
+			 <div class="dropdown-content">	
+			 	<a href="SixFlags.html">Six Flags Magic Mountain</a>
+			 	<a href="Blackpool.html">Blackpool Pleasure Beach </a>
+			 </div></li>
+			<li class="dropdown navlist-item "><a class="dropbtn">Cities </a>
+			 <div class="dropdown-content">	
+			 	<a href="Tokyo.html">Tokyo</a>
+			 	<a href="London.html">London </a>
+			 <li class="navlist-item"><a href="Sources.html">Sources</a></li>
+			 </div></li>
+  		</ul>
+	<!-- END NAVIGATION BAR-->
+		<div id="map" style="width:100%;height:500px"></div>
+</body>
+<body>
+<h1>Patagonia</h1>
+<p> Jaw-dropping landscapes make this South American destination a quintessential
+ spot for adventure travelers to visit. While wandering Argentine Patagonia, you'll
+ see everything from picturesque lakes to towering glaciers and mountains.</p>
+</html>
